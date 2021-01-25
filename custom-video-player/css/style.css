@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+  margin: 0;
+  background-color: #555;
+}
+
+h1 {
+  color: #f7c9dd;
+}
+
+.screen {
+  cursor: pointer;
+  width: 60%;
+  background-color: #000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  width: 60%;
+  color: #f7c9dd;
+  background: #333;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.controls .btn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.controls .fa-play {
+  color: #4ae54a;
+}
+
+.controls .fa-stop {
+  color: #ff0800;
+}
+
+.controls .fa-pause {
+  color: #039be5;
+}
+
+.controls .fa-volume-up,
+.controls .fa-volume-mute {
+  color: #fff;
+}
+
+.controls .timestamp {
+  padding-left: 10px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+@media (max-width: 800px) {
+  .screen,
+  .controls {
+    width: 90%;
+  }
+}
