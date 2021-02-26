@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  color: aliceblue;
+}
+
+h1 {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  cursor: pointer;
+  font-size: 18px;
+  padding: 15px 30px;
+  border-radius: 2px;
+  border: 1px solid aliceblue;
+  background: rgba(0, 0, 0, 0.2);
+  color: aliceblue;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus {
+  outline: 0;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+section {
+  text-align: center;
+  height: 100%;
+}
+
+.split.left {
+  position: absolute;
+  left: 0;
+
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.4),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("./dogo.jpg");
+  width: 50%;
+}
+
+.split.right {
+  position: absolute;
+  right: 0;
+
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.4),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("./kitty.jpg");
+  width: 50%;
+}
+
+.split.left,
+.split.right {
+  transition: width 0.8s ease-in-out;
+}
+
+.hover-left .left,
+.hover-right .right {
+  width: 75%;
+}
+
+.hover-left .right,
+.hover-right .left {
+  width: 25%;
+}
